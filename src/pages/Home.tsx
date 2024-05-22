@@ -7,7 +7,6 @@ import vector from "../../public/Assets/Vector2.png";
 import house1 from "../../public/Assets/house1.png";
 import house2 from "../../public/Assets/house2.png";
 import house3 from "../../public/Assets/house3.png";
-import { CiStar } from "react-icons/ci";
 
 function Home() {
   return (
@@ -16,18 +15,20 @@ function Home() {
         <img
           src={homebg}
           alt=""
-          className="w-full object-cover bg-no-repeat relative"
+          className="lg:w-full object-contain bg-no-repeat"
         />
       </div>
       {/* hero Section  */}
-      <div className=" w-full mt-10 max-w-7xl  m-auto">
+      <div className="w-full mt-10 max-w-7xl m-auto">
         <div className="">
-          <div className="absolute top-[30%] left-[5%]">
-            <h1 className=" text-7xl text-[#283A95] font-bold">Manage Your </h1>
-            <h1 className="absolute left-0 text-7xl text-[#283A95] font-bold">
+          <div className="absolute top-[30%] lg:left-[5%] left-[10%]">
+            <h1 className=" lg:text-7xl text-base text-[#283A95] font-bold">
+              Manage Your{" "}
+            </h1>
+            <h1 className="absolute left-0 lg:text-7xl text-base text-[#283A95] font-bold">
               Property
             </h1>
-            <p className="absolute top-44 font-bold text-xl ">
+            <p className="absolute lg:top-44 top-14 font-bold lg:text-xl text-sm ">
               You will have everything nearby supermarker
               ,buses,stations,thecamera neighbourhood etc
             </p>
@@ -41,7 +42,7 @@ function Home() {
           </div>
         </div>
         {/* second Section */}
-        <div className="mt-10 w-full flex justify-between  py-4">
+        <div className="mt-10 w-full flex justify-between p-10 py-4">
           <h1 className="text-5xl w-[30%] leading-tight font-bold">
             Our Excellent Services
           </h1>
@@ -76,7 +77,7 @@ function Home() {
 
         {/* third section */}
 
-        <div className="mt-28 w-full flex justify-between  py-4">
+        <div className="mt-28 w-full flex justify-between p-10 py-4">
           <h1 className="text-5xl w-[30%] leading-tight font-bold">
             <div className="w-[30%] h-[10px] bg-[#2F3C7E]"></div>
             Our Excellent Services
@@ -90,21 +91,21 @@ function Home() {
         <div className="w-full flex items-center gap-14 mt-20">
           {different.map((a, index) => {
             return (
-              <div
-                key={index}
-                className="gap-10 flex justify-center items-center flex-col w-full"
-              >
-                <div className="flex justify-center items-center">
+              <div className="w-full">
+                <div
+                  key={index}
+                  className="text-center flex items-center flex-col gap-5"
+                >
                   <div className="p-2 rounded-full bg-[#C1DEE8]">
                     <div className="rounded-full p-2 bg-[#EFE4D6]">
                       <img src={a.img} alt="" className="w-[40px] h-[40px]" />
                     </div>
                   </div>
+                  <h1 className="text-2xl font-bold">{a.title}</h1>
+                  <p className="text-lg font-semibold text-center leading-10  ">
+                    {a.desc}
+                  </p>
                 </div>
-                <h1 className="text-2xl font-bold">{a.title}</h1>
-                <p className="text-lg font-semibold text-center leading-10 ">
-                  {a.desc}
-                </p>
               </div>
             );
           })}
@@ -141,7 +142,37 @@ function Home() {
             })}
           </div>
           <div className="text-center mt-10">
-              <button className="bg-[#403F3F] px-8 py-3 text-xl font-bold text-white rounded-lg">All Property</button>
+            <button className="bg-[#403F3F] px-8 py-3 text-xl font-bold text-white rounded-lg">
+              All Property
+            </button>
+          </div>
+        </div>
+
+        {/* fifth section  */}
+        <div className="  mt-10">
+          <div className="text-center font-bold text-4xl">
+            <h1>A Modern Way To Buy or Sell your Home</h1>
+          </div>
+
+          <div className="flex gap-10  mt-24 relative overflow-hidden ">
+            {fifth.map((a, index) => {
+              return (
+                <div
+                  key={index}
+                  className=" w-full flex flex-col justify-center items-center border-2 p-8 relative overflow-hidden"
+                >
+                  <h3 className="font-normal z-10 text-lg">{a.heading}</h3>
+                  <h1 className="text-3xl font-bold py-4 z-10">{a.title}</h1>
+                  <p className="w-[80%] z-10 font-normal text-lg">{a.desc}</p>
+                  <button className="mt-10 bg-[#9B9B9B] px-8 py-3 text-xl font-bold text-white rounded-lg z-10 ">
+                    {a.btn}
+                  </button>
+                  <div>{a.des}</div>
+                  <div>{a.des1}</div>
+                  <div>{a.des2}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -310,5 +341,38 @@ const Three = [
       </svg>
     ),
     rating: "4.83",
+  },
+];
+
+const fifth = [
+  {
+    heading: "Are you in the market to",
+    title: "buy a new home?",
+    desc: "As one of the single largest financial decisions you’ll make in your lifetime it’s important to have a professional on your side. Our agent’s expertise can protect you from any pitfalls you might encounter during the process.",
+    btn: "Home Buying Guide",
+    des: (
+      <div className="w-[300px] h-[300px] bg-[#C1DEE8] rounded-[50%] absolute left-[-10%] bottom-[80px] blur-[100px]"></div>
+    ),
+    des1: (
+      <div className="w-[300px] h-[300px] bg-[#FFFFFF] rounded-[50%] absolute left-[30%] bottom-[0px] blur-[100px]"></div>
+    ),
+    des2: (
+      <div className="w-[300px] h-[300px] bg-[#FBD9B9] rounded-[50%] absolute right-[-10%] bottom-[-20px] blur-[100px]"></div>
+    ),
+  },
+  {
+    heading: "are you looking to",
+    title: "sell your home?",
+    desc: "There’s a lot to consider when selling your home. Utilizing our unprecedented resource, we will craft a unique and winning strategy to sell your home. Let us put our experience to work for you. Request a no-obligation consultation. ",
+    btn: "Home selling Guide",
+    des: (
+      <div className="w-[300px] h-[300px] bg-[#C1DEE8] rounded-[50%] absolute left-[-10%] bottom-[80px] blur-[100px]"></div>
+    ),
+    des1: (
+      <div className="w-[100px] h-[200px] bg-[#FFFFFF] rounded-[50%] absolute left-[30%] bottom-[0px] blur-[100px]"></div>
+    ),
+    des2: (
+      <div className="w-[300px] h-[300px] bg-[#FBD9B9] rounded-[50%] absolute right-[-10%] bottom-[-20px] blur-[100px]"></div>
+    ),
   },
 ];
