@@ -3,7 +3,7 @@ import logo from "../../public/Assets/logo.png";
 function Footer() {
   return (
     <div className="mt-44 max-w-7xl m-auto">
-      <div className="flex justify-between items-center text-center">
+      <div className="flex justify-between items-center text-center py-16">
         <div className="flex flex-col  items-center text-center mb-10 gap-4">
           <img src={logo} alt="" className="w-[150px] h-[150px]" />
           <h1 className="text-4xl font-bold">VAIKUNTAM REALITY MANAGEMENT</h1>

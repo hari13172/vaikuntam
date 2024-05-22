@@ -25,7 +25,7 @@ function FormMap() {
               placeholder="Type Your Query here....."
               className="w-[450px] h-[100px] px-4 rounded-lg border-2"
             />
-            <button className=" w-fit mt-5 bg-[#403F3F] px-8 py-3 text-xl font-bold text-white rounded-lg">
+            <button className=" w-fit mt-5 bg-[#403F3F] px-8 py-3 text-lg font-semibold text-white rounded-lg">
               Send My message
             </button>
           </form>

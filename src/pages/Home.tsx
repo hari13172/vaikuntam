@@ -11,168 +11,168 @@ import house3 from "../../public/Assets/house3.png";
 function Home() {
   return (
     <>
-      <div className="p-8">
-        <img
-          src={homebg}
-          alt=""
-          className="lg:w-full object-contain bg-no-repeat"
-        />
-      </div>
       {/* hero Section  */}
-      <div className="w-full mt-10 max-w-7xl m-auto">
+      <div className=" lg:w-full mt-10 bg-[url('/public/Assets/homebg.png')] bg-no-repeat ml-10">
         <div className="">
-          <div className="absolute top-[30%] lg:left-[5%] left-[10%]">
-            <h1 className=" lg:text-7xl text-base text-[#283A95] font-bold">
-              Manage Your{" "}
-            </h1>
-            <h1 className="absolute left-0 lg:text-7xl text-base text-[#283A95] font-bold">
-              Property
-            </h1>
-            <p className="absolute lg:top-44 top-14 font-bold lg:text-xl text-sm ">
-              You will have everything nearby supermarker
-              ,buses,stations,thecamera neighbourhood etc
-            </p>
+          <div className=" min-h-screen w-full">
+            <div className="p-24 flex flex-col ">
+              <h1 className=" lg:text-7xl text-base text-[#283A95] font-bold">
+                Manage Your{" "}
+              </h1>
+              <h1 className="lg:text-7xl text-base text-[#283A95] font-bold">Property</h1>
+              <p className="text-xl w-[40%] py-8 font-semibold">
+                You will have everything nearby supermarker
+                ,buses,stations,thecamera neighbourhood etc
+              </p>
 
-            <div className="absolute top-72 flex px-6 py-4 rounded-full bg-gray-600 text-lg">
-              <button>Learn More</button>
-            </div>
-            <div className="absolute top-72 left-40  px-6 py-4 rounded-full text-lg bg-gray-600">
-              <button>Get a Quote</button>
+              <div className="flex gap-8 font-semibold">
+              <button className=" px-6 py-4 rounded-full bg-[#8D92A9] text-lg">
+                Learn More
+              </button>
+
+              <button className=" px-6 py-4 rounded-full text-lg bg-[#8D92A9]">
+                Get a Quote
+              </button>
+              </div>
             </div>
           </div>
         </div>
         {/* second Section */}
-        <div className="mt-10 w-full flex justify-between p-10 py-4">
-          <h1 className="text-5xl w-[30%] leading-tight font-bold">
-            Our Excellent Services
-          </h1>
-          <p className="w-[45%] leading-9 text-lg font-semibold">
-            Check out our best service you can possibly order in building Your
-            company and don't forget to ask via our email or our customer
-            service if you are interested in using our service
-          </p>
-        </div>
-        <div className="lg:flex grid grid-col-1 gap-10 mt-20">
-          {prop.map((a, index) => {
-            return (
-              <div
-                key={index}
-                className="lg:flex lg:flex-col grid grid-col-1 items-center text-center justify-center w-full"
-              >
-                <img
-                  src={a.img}
-                  alt=""
-                  className="w-[380px] h-[250px] text-center"
-                />
-                <h1 className=" mt-5 font-medium text-2xl text-center">
-                  {a.title}
-                </h1>
-                <h3 className="text-center py-2 font-semibold lg:w-[100%]">
-                  {a.desc}
-                </h3>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* third section */}
-
-        <div className="mt-28 w-full flex justify-between p-10 py-4">
-          <h1 className="text-5xl w-[30%] leading-tight font-bold">
-            <div className="w-[30%] h-[10px] bg-[#2F3C7E]"></div>
-            Our Excellent Services
-          </h1>
-          <p className="w-[45%] leading-9 text-lg font-semibold">
-            Check out our best service you can possibly order in building Your
-            company and don't forget to ask via our email or our customer
-            service if you are interested in using our service
-          </p>
-        </div>
-        <div className="w-full flex items-center gap-14 mt-20">
-          {different.map((a, index) => {
-            return (
-              <div className="w-full">
+        <div className=" w-full max-w-7xl m-auto">
+          <div className="mt-10 w-full flex justify-between p-10 py-4">
+            <h1 className="text-5xl w-[30%] leading-tight font-bold">
+              Our Excellent Services
+            </h1>
+            <p className="w-[45%] leading-9 text-lg font-semibold">
+              Check out our best service you can possibly order in building Your
+              company and don't forget to ask via our email or our customer
+              service if you are interested in using our service
+            </p>
+          </div>
+          <div className="lg:flex grid grid-col-1 gap-10 mt-20">
+            {prop.map((a, index) => {
+              return (
                 <div
                   key={index}
-                  className="text-center flex items-center flex-col gap-5"
+                  className="lg:flex lg:flex-col grid grid-col-1 items-center text-center justify-center w-full"
                 >
-                  <div className="p-2 rounded-full bg-[#C1DEE8]">
-                    <div className="rounded-full p-2 bg-[#EFE4D6]">
-                      <img src={a.img} alt="" className="w-[40px] h-[40px]" />
-                    </div>
-                  </div>
-                  <h1 className="text-2xl font-bold">{a.title}</h1>
-                  <p className="text-lg font-semibold text-center leading-10  ">
+                  <img
+                    src={a.img}
+                    alt=""
+                    className="w-[380px] h-[250px] text-center"
+                  />
+                  <h1 className=" mt-5 font-medium text-2xl text-center">
+                    {a.title}
+                  </h1>
+                  <h3 className="text-center py-2 font-semibold lg:w-[100%]">
                     {a.desc}
-                  </p>
+                  </h3>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Fourth section  */}
-        <div className="mt-20 ">
-          <div className="text-center font-bold text-4xl">
-            <h1>Explore Our Properties</h1>
+              );
+            })}
           </div>
-          <div className="flex mt-20 gap-10 ">
-            {Three.map((a, index) => {
+
+          {/* third section */}
+
+          <div className="mt-28 w-full flex justify-between p-10 py-4">
+            <h1 className="text-5xl w-[30%] leading-tight font-bold">
+              <div className="w-[30%] h-[10px] bg-[#2F3C7E]"></div>
+              Our Excellent Services
+            </h1>
+            <p className="w-[45%] leading-9 text-lg font-semibold">
+              Check out our best service you can possibly order in building Your
+              company and don't forget to ask via our email or our customer
+              service if you are interested in using our service
+            </p>
+          </div>
+          <div className="w-full flex items-center gap-14 mt-20">
+            {different.map((a, index) => {
               return (
-                <div
-                  key={index}
-                  className="flex flex-col border-2 rounded-lg w-full"
-                >
-                  <img src={a.img} alt="" className="" />
-                  <div className="p-6 py-10 ">
-                    <h1 className="text-2xl font-bold">{a.title1}</h1>
-                    <h1 className="text-2xl font-bold">{a.title2}</h1>
-                    <p className="py-2 w-[80%] font-medium text-lg">{a.para}</p>
-                    <div className="flex gap-2 py-2">
-                      <span>{a.svg}</span>
-                      <span>{a.svg}</span>
-                      <span>{a.svg}</span>
-                      <span>{a.svg}</span>
-                      <span>{a.svg1}</span>
-                      <span className="px-5">{a.rating}</span>
+                <div className="w-full">
+                  <div
+                    key={index}
+                    className="text-center flex items-center flex-col gap-5"
+                  >
+                    <div className="p-2 rounded-full bg-[#C1DEE8]">
+                      <div className="rounded-full p-2 bg-[#EFE4D6]">
+                        <img src={a.img} alt="" className="w-[40px] h-[40px]" />
+                      </div>
                     </div>
+                    <h1 className="text-2xl font-bold">{a.title}</h1>
+                    <p className="text-lg font-semibold text-center leading-10  ">
+                      {a.desc}
+                    </p>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="text-center mt-10">
-            <button className="bg-[#403F3F] px-8 py-3 text-xl font-bold text-white rounded-lg">
-              All Property
-            </button>
-          </div>
-        </div>
 
-        {/* fifth section  */}
-        <div className="  mt-10">
-          <div className="text-center font-bold text-4xl">
-            <h1>A Modern Way To Buy or Sell your Home</h1>
+          {/* Fourth section  */}
+          <div className="mt-20 ">
+            <div className="text-center font-bold text-4xl">
+              <h1>Explore Our Properties</h1>
+            </div>
+            <div className="flex mt-20 gap-10 ">
+              {Three.map((a, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col border-2 rounded-lg w-full"
+                  >
+                    <img src={a.img} alt="" className="" />
+                    <div className="p-6 py-10 ">
+                      <h1 className="text-2xl font-bold">{a.title1}</h1>
+                      <h1 className="text-2xl font-bold">{a.title2}</h1>
+                      <p className="py-2 w-[80%] font-medium text-lg">
+                        {a.para}
+                      </p>
+                      <div className="flex gap-2 py-2">
+                        <span>{a.svg}</span>
+                        <span>{a.svg}</span>
+                        <span>{a.svg}</span>
+                        <span>{a.svg}</span>
+                        <span>{a.svg1}</span>
+                        <span className="px-5">{a.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="text-center mt-10">
+              <button className="bg-[#403F3F] px-8 py-3 text-xl font-bold text-white rounded-lg">
+                All Property
+              </button>
+            </div>
           </div>
 
-          <div className="flex gap-10  mt-24 relative overflow-hidden ">
-            {fifth.map((a, index) => {
-              return (
-                <div
-                  key={index}
-                  className=" w-full flex flex-col justify-center items-center border-2 p-8 relative overflow-hidden"
-                >
-                  <h3 className="font-normal z-10 text-lg">{a.heading}</h3>
-                  <h1 className="text-3xl font-bold py-4 z-10">{a.title}</h1>
-                  <p className="w-[80%] z-10 font-normal text-lg">{a.desc}</p>
-                  <button className="mt-10 bg-[#9B9B9B] px-8 py-3 text-xl font-bold text-white rounded-lg z-10 ">
-                    {a.btn}
-                  </button>
-                  <div>{a.des}</div>
-                  <div>{a.des1}</div>
-                  <div>{a.des2}</div>
-                </div>
-              );
-            })}
+          {/* fifth section  */}
+          <div className="  mt-10">
+            <div className="text-center font-bold text-4xl">
+              <h1>A Modern Way To Buy or Sell your Home</h1>
+            </div>
+
+            <div className="flex gap-10  mt-24 relative overflow-hidden ">
+              {fifth.map((a, index) => {
+                return (
+                  <div
+                    key={index}
+                    className=" w-full flex flex-col justify-center items-center border-2 p-8 relative overflow-hidden"
+                  >
+                    <h3 className="font-normal z-10 text-lg">{a.heading}</h3>
+                    <h1 className="text-3xl font-bold py-4 z-10">{a.title}</h1>
+                    <p className="w-[80%] z-10 font-normal text-lg">{a.desc}</p>
+                    <button className="mt-10 bg-[#9B9B9B] px-8 py-3 text-lg font-bold text-white rounded-lg z-10 ">
+                      {a.btn}
+                    </button>
+                    <div>{a.des}</div>
+                    <div>{a.des1}</div>
+                    <div>{a.des2}</div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
