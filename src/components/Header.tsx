@@ -12,30 +12,33 @@ function Header() {
   };
 
   const navItems = [
-    { link: "about", path: "aboutus" },
-    { link: "Rent", path: "Rent" },
-    { link: "Listing", path: "Listing" },
-    { link: "Buy", path: "Buy" },
-    { link: "Sell", path: "Sell" },
+    { link: "Home", path: "/" },
+    { link: "About", path: "aboutus" },
+    { link: "Rent", path: "rent" },
+    { link: "Listing", path: "listing" },
+    { link: "Buy", path: "buy" },
+    { link: "Sell", path: "sell" },
   ];
-  return (
-    <nav className="w-full flex  max-w-7xl m-auto justify-between items-center p-4 rounded-full gap-1 lg:px-16 py-3">
-      <img src={logo} alt="" />
 
-      <ul className="lg:flex justify-center items-center gap-10 hidden  rounded-full bg-white">
-        {navItems.map(({ link, path }) => {
-          return (
-            <Link
-              key={path}
-              className=" uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-orange-600 hover:text-white"
-            >
-              {link}
-            </Link>
-          );
-        })}
+  return (
+    <nav className="w-full flex max-w-7xl m-auto justify-between items-center p-4 rounded-full gap-1 lg:px-16 py-3">
+      <Link to="/">
+        <img src={logo} alt="Logo" />
+      </Link>
+
+      <ul className="lg:flex justify-center items-center gap-10 hidden rounded-full bg-white">
+        {navItems.map(({ link, path }) => (
+          <Link
+            key={path}
+            to={path}
+            className="uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-orange-600 hover:text-white"
+          >
+            {link}
+          </Link>
+        ))}
       </ul>
 
-      <button className=" lg:block hidden border-2 border-gray-500 px-10 py-3 text-lg rounded-full font-bold hover:scale-105 transition-transform duration-300">
+      <button className="lg:block hidden border-2 border-gray-500 px-10 py-3 text-lg rounded-full font-bold hover:scale-105 transition-transform duration-300">
         Contact Now
       </button>
 
@@ -46,9 +49,9 @@ function Header() {
       >
         <div>
           {isMenuOpen ? (
-            <FaXmark className=" text-3xl cursor-pointer" />
+            <FaXmark className="text-3xl cursor-pointer" />
           ) : (
-            <FaBars className=" text-3xl cursor-pointer" />
+            <FaBars className="text-3xl cursor-pointer" />
           )}
         </div>
       </div>
@@ -59,16 +62,15 @@ function Header() {
         } w-full h-fit bg-black p-4 absolute top-[110px] left-0`}
       >
         <ul className="flex flex-col justify-center items-center gap-2 w-full">
-          {navItems.map(({ link, path }) => {
-            return (
-              <Link
-                key={path}
-                className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-orange-600 hover:text-white w-full text-center"
-              >
-                {link}
-              </Link>
-            );
-          })}
+          {navItems.map(({ link, path }) => (
+            <Link
+              key={path}
+              to={path}
+              className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-orange-600 hover:text-white w-full text-center"
+            >
+              {link}
+            </Link>
+          ))}
         </ul>
       </div>
     </nav>

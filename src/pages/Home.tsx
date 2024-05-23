@@ -127,19 +127,19 @@ function Home() {
                     className="flex flex-col border-2 rounded-lg w-full lg:ml-0 ml-[-20px]"
                   >
                     <img src={a.img} alt="" className="" />
-                    <div className="p-6 py-10 ">
+                    <div className="p-6 py-10 lg:text-start text-center">
                       <h1 className="text-2xl font-bold">{a.title1}</h1>
                       <h1 className="text-2xl font-bold">{a.title2}</h1>
-                      <p className="py-2 w-[80%] font-medium text-lg">
+                      <p className="py-2 lg:w-[80%] font-medium text-lg">
                         {a.para}
                       </p>
-                      <div className="flex gap-2 py-2">
+                      <div className="flex gap-2 py-2 justify-center lg:justify-start">
                         <span>{a.svg}</span>
                         <span>{a.svg}</span>
                         <span>{a.svg}</span>
                         <span>{a.svg}</span>
                         <span>{a.svg1}</span>
-                        <span className="px-5">{a.rating}</span>
+                        <span className="px-5 text-lg">{a.rating}</span>
                       </div>
                     </div>
                   </div>
@@ -154,17 +154,17 @@ function Home() {
           </div>
 
           {/* fifth section  */}
-          <div className="  mt-10">
-            <div className="text-center font-bold lg:text-5xl text-2xl leading-tight">
+          <div className="mt-10">
+            <div className="text-center font-bold lg:text-5xl text-2xl leading-tight lg:ml-0 ml-[-30px]">
               <h1>A Modern Way To Buy or Sell your Home</h1>
             </div>
 
-            <div className="lg:flex gap-10 items-center grid grid-col-1 mt-24 relative overflow-hidden">
+            <div className="lg:flex gap-10 items-center grid grid-col-1 lg:mt-24 mt-16 relative ">
               {fifth.map((a, index) => {
                 return (
                   <div
                     key={index}
-                    className=" w-full flex flex-col justify-center items-center border-2 p-8 relative overflow-hidden "
+                    className=" w-full flex flex-col justify-center items-center border-2 p-8 relative overflow-hidden lg:ml-0 ml-[-20px] "
                   >
                     <h3 className="font-normal z-10 text-lg">{a.heading}</h3>
                     <h1 className="text-3xl font-bold py-4 z-10">{a.title}</h1>
